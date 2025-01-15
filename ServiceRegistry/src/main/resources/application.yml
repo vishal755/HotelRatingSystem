@@ -1,0 +1,9 @@
+eureka:
+  instance:
+    host: localhost
+  client:
+    register-with-eureka: false #It will block serviceRegistry microservice to register on itself serviceRegistry.
+    fetch-registry: false  #It will block itself for fetching information from serviceRegistry
+
+server:
+  port: 8761
