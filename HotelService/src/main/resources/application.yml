@@ -9,7 +9,7 @@ spring:
 #    driver.class-name: com.postgresql.jdbc.Driver
 
   application:
-    name: HOTEL-SERVICE
+    name: HOTELSERVICE
 
   jpa:
     hibernate:
