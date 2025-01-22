@@ -11,6 +11,8 @@ spring:
   application:
     name: USERSERVICE
 
+  profile: dev
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -20,12 +22,17 @@ spring:
 #      hibernate:
 #        dialect: org.hibernate.dialect.MySQL8Dialect
 
+# below properties will fetch config from config server (configuration stored at github repo)
+  config:
+    import: optional:configserver:http://localhost:8085
 
-eureka:
-  instance:
-    prefer-ip-address: true #in eureka server page it will use ip address as url for this microservice.
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka
+
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true #in eureka server page it will use ip address as url for this microservice.
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
